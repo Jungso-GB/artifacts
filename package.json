@@ -1,0 +1,10 @@
+{
+    "name": "artificats",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {},
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "node-fetch": "^2.6.1"
+    }
+}

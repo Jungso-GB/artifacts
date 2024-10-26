@@ -1,4 +1,5 @@
-import { profile } from './index.js';
+import { profile } from '../index.js';
+
 
 const index = new profile();
 
@@ -22,6 +23,7 @@ async function Action(character, iterance) {
   for (let i = 0; i < iterance; i++) {
     const response = await fetch(`https://api.artifactsmmo.com/my/${character}/action/gathering`, requestOptions);
     const result = await response.json();
+    console.log(result);
     const remainingCooldown = result.data.cooldown.remaining_seconds;
     const gatherItem = result.data.details.items[0].code || ''
 

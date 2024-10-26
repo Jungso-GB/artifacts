@@ -1,4 +1,4 @@
-import { profile } from './index.js';
+import { profile } from '../index.js';
 
 const index = new profile();
 

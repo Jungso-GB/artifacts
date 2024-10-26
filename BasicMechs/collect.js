@@ -32,7 +32,7 @@ async function Action(character, iterance) {
     .catch((error) => console.log('error', error));*/
 
     const totalCooldown = result.data.cooldown.total_seconds
-    console.warn(`[${character}] Collecte de ${gatherItem}... ${iterance - i} / ${iterance} restants. Cooldown / item : ${totalCooldown}s`);
+    console.log(`${index.colors.fg.green}[${character}] Collecte de ${gatherItem}... ${iterance - i} / ${iterance} restants. \nCooldown / item : ${totalCooldown} s \nTemps restant: ${Math.floor(totalCooldown * (iterance - i) / 60)} m`);
 
     await new Promise((resolve) => setTimeout(resolve, remainingCooldown * 1000 + 1.2));
   }
